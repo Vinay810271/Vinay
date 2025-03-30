@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🗳 Online Voting</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#candidates">Candidates</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="http://localhost/voting_system/login.php" class="btn">Login</a></li>
+        </ul>
+    </nav>
+    
+    <header id="home">
+        <h1 class="animate">Welcome to Online Voting System</h1>
+        <p>Cast your vote securely from anywhere!</p>
+        <a href="login.php" class="btn">Vote Now</a>
+    </header>
+    
+    <section id="candidates">
+        <h2 class="animate">Candidates</h2>
+        <div class="candidates-container">
+            <div class="candidate">
+                <img src="candidate1.jpg" alt="Candidate 1">
+                <h3>Candidate 1</h3>
+                <button class="vote-btn">Vote</button>
+            </div>
+            <div class="candidate">
+                <img src="candidate2.jpg" alt="Candidate 2">
+                <h3>Candidate 2</h3>
+                <button class="vote-btn">Vote</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@onlinevoting.com</p>
+        <p>Phone: +91 9507193996</p>
+    </section>
+    
+    <script>
+        gsap.from(".animate", {opacity: 0, y: -50, duration: 1, stagger: 0.3});
+        gsap.from(".candidate", {opacity: 0, scale: 0.5, duration: 0.5, stagger: 0.2});
+    </script>
+</body>
+</html>
